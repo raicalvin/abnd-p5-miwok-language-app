@@ -16,6 +16,7 @@
 package com.example.android.miwok;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         numbers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // Create a new intent for open the NumbersActivity
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
             }
         });
 
@@ -56,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         family.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // Create a new intent for open the FamilyActivity
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
             }
         });
 
@@ -64,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
         colors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // Create a new intent for open the ColorsActivity
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
             }
         });
 
@@ -72,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
         phrases.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                // Create a new intent for open the PhrasesActivity
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
             }
         });
 
