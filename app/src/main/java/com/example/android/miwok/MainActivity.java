@@ -44,6 +44,38 @@ public class MainActivity extends AppCompatActivity {
         // Find the view that shows the phrases category
         TextView phrases = (TextView) findViewById(R.id.phrases);
 
+        // Set a clickListener on the numbers view
+        numbers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        // Set a clickListener on the family view
+        family.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        // Set a clickListener on the colors view
+        colors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        // Set a clickListener on the phrases view
+        phrases.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
     }
 
     public void openNumbersList(View view) {
