@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Find the view that shows the numbers category
-        TextView numbers = (TextView) findViewById(R.id.numbers);
+        final TextView numbers = (TextView) findViewById(R.id.numbers);
 
         // Find the view that shows the family category
         TextView family = (TextView) findViewById(R.id.family);
@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Create a new intent for open the NumbersActivity
                 Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                // Start the NumbersActivity
+                startActivity(numbersIntent);
             }
         });
 
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Create a new intent for open the FamilyActivity
                 Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                // Start the FamilyActivity
+                startActivity(familyIntent);
             }
         });
 
@@ -69,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Create a new intent for open the ColorsActivity
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                // Start the ColorsActivity
+                startActivity(colorsIntent);
             }
         });
 
@@ -78,6 +84,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // Create a new intent for open the PhrasesActivity
                 Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                // Start the PhrasesActivity
+                startActivity(phrasesIntent);
             }
         });
 
