@@ -32,7 +32,5 @@ public class ColorsActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-
-
     }
 }
