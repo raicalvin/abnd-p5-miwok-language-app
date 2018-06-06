@@ -16,7 +16,7 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
 
         // Create array to store number words
         /*
@@ -130,7 +130,7 @@ public class NumbersActivity extends AppCompatActivity {
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
         // activity_numbers.xml layout file.
-        ListView listView = (ListView) findViewById(R.id.list_numbers);
+        ListView listView = (ListView) findViewById(R.id.list);
         // GridView gridview = (GridView) findViewById(R.id.gridview);
 
         // Make the {@link ListView} use the {@link ArrayAdapter} we created above, so that the
