@@ -46,8 +46,24 @@ public class NumbersActivity extends AppCompatActivity {
         */
 
         // Now create an ArrayList to store the words
-        ArrayList<String> words = new ArrayList<String>();
+        // ArrayList<String> words = new ArrayList<String>();
 
+        // Now create an ArrayList of Word objects. Each element is a Word object
+        ArrayList<Word> words = new ArrayList<Word>();
+
+        // Add every word you want to put into the list as a Word object using the custom-created Word class
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("two", "otiiko"));
+        words.add(new Word("three", "tolookosu"));
+        words.add(new Word("four", "oyyisa"));
+        words.add(new Word("five", "massokka"));
+        words.add(new Word("six", "temmokka"));
+        words.add(new Word("seven", "kenekaku"));
+        words.add(new Word("eight", "kawinta"));
+        words.add(new Word("nine", "wo'e"));
+        words.add(new Word("ten", "na'aacha"));
+
+        /*
         words.add("one");
         words.add("two");
         words.add("three");
@@ -58,6 +74,7 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("eight");
         words.add("nine");
         words.add("ten");
+        */
 
         // Use the LogCat to determine the object at each index
         /*
@@ -102,7 +119,13 @@ public class NumbersActivity extends AppCompatActivity {
         // display a single word.
         // ArrayAdapter<String> itemsAdapter =
         //         new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, R.id.list_item, words);
+        // ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, R.layout.list_item, words);
+        // Need to update the ArrayAdapter to take in Word objects
+        // ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<Word>(this, R.layout.list_item, words);
+        // Instead of the ArrayAdapter, we'll be using the WordAdapter class we just created
+        // The WordAdapter class will take in two inputs: the context and the list of words since we'll be inflating the layout within the class instead of passing it as an argument here:
+        WordAdapter adapter = new WordAdapter(this, words);
+
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -114,7 +137,7 @@ public class NumbersActivity extends AppCompatActivity {
         // {@link ListView} will display list items for each word in the list of words.
         // Do this by calling the setAdapter method on the {@link ListView} object and pass in
         // 1 argument, which is the {@link ArrayAdapter} with the variable name itemsAdapter.
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(adapter);
 
 
     }
