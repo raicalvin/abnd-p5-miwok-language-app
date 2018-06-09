@@ -1,5 +1,7 @@
 package com.example.android.miwok;
 
+import android.media.Image;
+
 /**
  * {@link Word} represents a vocabulary word that the user wants to learn.
  * It contains a default translation and a Miwok translation for that word.
@@ -14,6 +16,9 @@ public class Word {
 
     /** Miwok translation for the word */
     private String mMiwokTranslation;
+
+    /** Resource ID for the image */
+    private int mImageResourceID;
 
     // Now the constructor: takes in two Strings and set the translation words from above. The name has to match the class name exactly and has no return type.
 
@@ -43,5 +48,11 @@ public class Word {
     public String getMiwokTranslation() {
         return mMiwokTranslation;
     }
+
+    /**
+     * Get the image resource ID of the icon associated with the word
+     * @return Image Resource ID
+     */
+    public int getImageResourceID() { return mImageResourceID; }
 
 }
