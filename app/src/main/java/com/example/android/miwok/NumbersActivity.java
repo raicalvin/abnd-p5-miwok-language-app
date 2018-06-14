@@ -124,7 +124,7 @@ public class NumbersActivity extends AppCompatActivity {
         // ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<Word>(this, R.layout.list_item, words);
         // Instead of the ArrayAdapter, we'll be using the WordAdapter class we just created
         // The WordAdapter class will take in two inputs: the context and the list of words since we'll be inflating the layout within the class instead of passing it as an argument here:
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_numbers);
 
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.

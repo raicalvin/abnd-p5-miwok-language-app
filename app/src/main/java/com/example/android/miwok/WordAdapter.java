@@ -1,14 +1,17 @@
 package com.example.android.miwok;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,14 +20,14 @@ import static android.content.ContentValues.TAG;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
+    int linearLayoutBackgroundColor;
+
     // This is the constructor for the WordAdapter which takes in two arguments: the context (the activity) and the ArrayList of word objects, in this case words.
-    public WordAdapter(Context context, ArrayList<Word> words) {
+    public WordAdapter(Context context, ArrayList<Word> words, int color) {
         super(context, 0, words);
-        Log.i(TAG, "OMGGGGGGGGGG the CONTEXT returned " + context);
-
+        Log.i(TAG, "The CONTEXT returned " + context);
+        linearLayoutBackgroundColor = color;
     }
-
-
 
     /**
      * {@inheritDoc}
@@ -50,19 +53,21 @@ public class WordAdapter extends ArrayAdapter<Word> {
         // These are the two TextViews that we are referencing from the custom XML layout
         TextView miwokTranslationTV = (TextView) convertView.findViewById(R.id.miwok_text_view);
         TextView defaultTranslationTV = (TextView) convertView.findViewById(R.id.default_text_view);
+        LinearLayout textItemsLinearLayout = (LinearLayout) convertView.findViewById(R.id.text_items_linear_layout);
 
         // Now populate the two above views using the data from the word object
         miwokTranslationTV.setText(word.getMiwokTranslation());
         defaultTranslationTV.setText(word.getDefaulTranslation());
 
-        Log.i(TAG, "OMGGGGGGGGGG the view returned " + word.getImageResourceID());
+        textItemsLinearLayout.setBackgroundColor(ContextCompat.getColor(getContext(), linearLayoutBackgroundColor));
+
+        Log.i(TAG, "The view returned " + word.getImageResourceID());
 
         ImageView iconImageIV = (ImageView) convertView.findViewById(R.id.image);
 
         if (word.hasImage()) {
             // Set the ImageView to the image resource ID specified in the current word
             iconImageIV.setImageResource(word.getImageResourceID());
-
             // Make sure the View is visible (since views get reused)
             iconImageIV.setVisibility(View.VISIBLE);
         } else {

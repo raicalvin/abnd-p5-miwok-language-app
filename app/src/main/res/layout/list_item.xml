@@ -22,7 +22,7 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:gravity="center_vertical"
-        android:background="@color/category_numbers">
+        android:id="@+id/text_items_linear_layout">
 
         <TextView
             android:id="@+id/miwok_text_view"
