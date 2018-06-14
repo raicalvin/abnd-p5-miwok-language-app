@@ -30,4 +30,16 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
+
+    <!-- Style for a single vocabulary word heading -->
+    <style name="HeadingWordStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style for a single vocabulary word subheading -->
+    <style name="SubHeadingWordStyle">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>

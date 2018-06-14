@@ -18,7 +18,9 @@ public class Word {
     private String mMiwokTranslation;
 
     /** Resource ID for the image */
-    private int mImageResourceID;
+    private int mImageResourceID = NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED = -1;
 
     // Now the constructor: takes in two Strings and set the translation words from above. The name has to match the class name exactly and has no return type.
 
@@ -67,5 +69,13 @@ public class Word {
      * @return Image Resource ID
      */
     public int getImageResourceID() { return mImageResourceID; }
+
+    /**
+     * Returns whether or not there is an image for this word
+     * @return true or false depending on image presence
+     */
+    public boolean hasImage() {
+        return mImageResourceID != NO_IMAGE_PROVIDED;
+    }
 
 }
