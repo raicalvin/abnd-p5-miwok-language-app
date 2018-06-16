@@ -20,13 +20,13 @@ import static android.content.ContentValues.TAG;
 
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    int linearLayoutBackgroundColor;
+    private int mLinearLayoutBackgroundColor;
 
     // This is the constructor for the WordAdapter which takes in two arguments: the context (the activity) and the ArrayList of word objects, in this case words.
     public WordAdapter(Context context, ArrayList<Word> words, int color) {
         super(context, 0, words);
         Log.i(TAG, "The CONTEXT returned " + context);
-        linearLayoutBackgroundColor = color;
+        mLinearLayoutBackgroundColor = color;
     }
 
     /**
@@ -59,7 +59,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
         miwokTranslationTV.setText(word.getMiwokTranslation());
         defaultTranslationTV.setText(word.getDefaulTranslation());
 
-        textItemsLinearLayout.setBackgroundColor(ContextCompat.getColor(getContext(), linearLayoutBackgroundColor));
+        textItemsLinearLayout.setBackgroundColor(ContextCompat.getColor(getContext(), mLinearLayoutBackgroundColor));
 
         Log.i(TAG, "The view returned " + word.getImageResourceID());
 
