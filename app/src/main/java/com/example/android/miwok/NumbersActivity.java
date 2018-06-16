@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
+    MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -148,7 +150,7 @@ public class NumbersActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast testToast = Toast.makeText(NumbersActivity.this, "Hello", Toast.LENGTH_SHORT);
                 testToast.show();
-                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_one);
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.number_one);
                 mediaPlayer.start();
             }
         });
