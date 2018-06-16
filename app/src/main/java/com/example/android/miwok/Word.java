@@ -22,6 +22,8 @@ public class Word {
 
     private static final int NO_IMAGE_PROVIDED = -1;
 
+    private int mRawAudioID;
+
     // Now the constructor: takes in two Strings and set the translation words from above. The name has to match the class name exactly and has no return type.
 
     /**
@@ -46,6 +48,20 @@ public class Word {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceID = resourceID;
+    }
+
+    /**
+     * Create a new Word object with resource ID
+     *
+     * @param defaultTranslation is the word in a language that the user is already familiar with (such as English)
+     * @param miwokTranslation is the word in the Miwok language
+     * @param resourceID is the resource ID for the image to be displayed
+     */
+    public Word(String defaultTranslation, String miwokTranslation, int resourceID, int rawID) {
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResourceID = resourceID;
+        mRawAudioID = rawID;
     }
 
     /**
@@ -77,5 +93,7 @@ public class Word {
     public boolean hasImage() {
         return mImageResourceID != NO_IMAGE_PROVIDED;
     }
+
+    public int getRawResourceID() { return mRawAudioID; }
 
 }
