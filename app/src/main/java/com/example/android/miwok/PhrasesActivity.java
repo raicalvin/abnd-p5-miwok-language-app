@@ -78,4 +78,12 @@ public class PhrasesActivity extends AppCompatActivity {
             mediaPlayer = null;
         }
     }
+
+    // Release media resources when user leaves the activity
+    @Override
+    protected void onStop() {
+        super.onStop();
+        releaseMediaPlayer();
+    }
+
 }
