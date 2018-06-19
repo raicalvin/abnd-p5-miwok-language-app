@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     android:minHeight="@dimen/list_item_height"
     android:orientation="horizontal"
-    android:background="@color/tan_background">
+    android:background="@color/tan_background"
+>
+
 
     <ImageView
         android:id="@+id/image"
