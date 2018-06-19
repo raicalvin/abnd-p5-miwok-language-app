@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
@@ -49,6 +50,9 @@ public class PhrasesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
+
+        // Create and setup the {@link AudioManager} to request audio focus
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         // Now create an ArrayList of Word objects. Each element is a Word object
         final ArrayList<Word> words = new ArrayList<Word>();
@@ -104,7 +108,6 @@ public class PhrasesActivity extends AppCompatActivity {
                 }
             }
         };
-
     }
 
     /**
