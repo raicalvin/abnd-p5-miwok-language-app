@@ -54,12 +54,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
         TextView miwokTranslationTV = (TextView) convertView.findViewById(R.id.miwok_text_view);
         TextView defaultTranslationTV = (TextView) convertView.findViewById(R.id.default_text_view);
         LinearLayout textItemsLinearLayout = (LinearLayout) convertView.findViewById(R.id.text_items_linear_layout);
+        LinearLayout playIconLayout = (LinearLayout) convertView.findViewById(R.id.layout_play_icon);
 
         // Now populate the two above views using the data from the word object
         miwokTranslationTV.setText(word.getMiwokTranslation());
         defaultTranslationTV.setText(word.getDefaulTranslation());
 
         textItemsLinearLayout.setBackgroundColor(ContextCompat.getColor(getContext(), mLinearLayoutBackgroundColor));
+        playIconLayout.setBackgroundColor(ContextCompat.getColor(getContext(), mLinearLayoutBackgroundColor));
 
         Log.i(TAG, "The view returned " + word.getImageResourceID());
 
