@@ -17,34 +17,7 @@ import static android.media.AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK;
 
 public class ColorsActivity extends AppCompatActivity {
 
-    MediaPlayer mMediaPlayer;
 
-    /** handles audio focus when playing a sound file */
-    private AudioManager mAudioManager;
-
-    AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
-        @Override
-        public void onAudioFocusChange(int focusChange) {
-            if (focusChange == AUDIOFOCUS_LOSS_TRANSIENT || focusChange == AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                // pause playback
-                mMediaPlayer.pause();
-                mMediaPlayer.seekTo(0);
-            } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
-                // audiofocus_gain case means we have regained focus and can resume playback
-                mMediaPlayer.start();
-            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
-                // we lost audio focus and stop playback and cleanup resources
-                releaseMediaPlayer();
-            }
-        }
-    };
-
-    private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
-        @Override
-        public void onCompletion(MediaPlayer mp) {
-            releaseMediaPlayer();
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
