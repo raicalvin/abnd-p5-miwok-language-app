@@ -15,7 +15,7 @@ This project was developed in my Android Basics Nanodegree program from Udacity'
 
 ## User Interface
 
-![](http://placekitten.com/300/200) ![](http://placekitten.com/300/200)
+![](https://github.com/raicalvin/pictures/blob/master/pix-abnd-p7-miwok-app/pic1.png) ![](https://github.com/raicalvin/pictures/blob/master/pix-abnd-p7-miwok-app/pic2.png) ![](https://github.com/raicalvin/pictures/blob/master/pix-abnd-p7-miwok-app/pic4.png) 
 
 ## Resources
 
