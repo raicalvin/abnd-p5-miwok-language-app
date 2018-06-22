@@ -1,47 +1,38 @@
-Miwok App
-===================================
+# Android App: Miwok Translation App
 
-This app displays lists of vocabulary words for the user to learn the Miwok language.
-Used in a Udacity course in the Beginning Android Nanodegree.
+## Project Information
 
-Pre-requisites
---------------
+### About
 
-- Android SDK v23
-- Android Build Tools v23.0.2
-- Android Support Repository v23.3.0
+This project was developed in my Android Basics Nanodegree program from Udacity's Grow With Google Developer Scholarship. Users can swipe between tabs to access different categories, tap on words and phrases to hear the Miwok pronounciation, and learn some of the common words and phrases found in the Miwok language.
 
-Getting Started
----------------
+### Concepts
 
-This sample uses the Gradle build system. To build this project, use the
-"gradlew build" command or use "Import Project" in Android Studio.
+- ListViews and custom ArrayAdapters were used to populate fragments with custom layouts including the Miwok and English words and phrases
+- Audio playback was controlled using an MediaPlayer class for each category, releasing media resources when necessary
+- System audio focus was controlled using an AudioManager class for each category
+- Fragments and ViewPagers were used to construct the tabbed UI layout
 
-Support
--------
+## User Interface
 
-- Google+ Community: https://plus.google.com/communities/105153134372062985968
-- Stack Overflow: http://stackoverflow.com/questions/tagged/android
+![](http://placekitten.com/300/200) ![](http://placekitten.com/300/200)
 
-Patches are encouraged, and may be submitted by forking this project and
-submitting a pull request through GitHub. Please see CONTRIBUTING.md for more details.
+## Resources
 
-License
--------
+Starter code, initial design files, and mockups were provided from [Udacity](https://github.com/udacity/ud839_Miwok/tree/Starter-code). The original license and project information can be found at that link.
 
-Copyright 2016 The Android Open Source Project, Inc.
+## Reference
 
-Licensed to the Apache Software Foundation (ASF) under one or more contributor
-license agreements.  See the NOTICE file distributed with this work for
-additional information regarding copyright ownership.  The ASF licenses this
-file to you under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License.  You may obtain a copy of
-the License at
+- Fragments - *Official Android documentation for Fragments* - [Documentation](https://developer.android.com/guide/components/fragments)
+- ArrayAdapter - *Official Android documentation for ArrayAdapter* - [Documentation](https://developer.android.com/reference/android/widget/ArrayAdapter)
+- ViewPager - *Official Android documentation for ViewPagers* - [Documentation](https://developer.android.com/reference/android/support/v4/view/ViewPager)
+- AudioManager - *Official Android documentation for AudioManager* - [Documentation](https://developer.android.com/reference/android/media/AudioManager)
+- AudioManager - *Official Android documentation for AudioManager* - [Documentation](https://developer.android.com/reference/android/media/AudioManager)
 
-http://www.apache.org/licenses/LICENSE-2.0
+## Contact
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
-License for the specific language governing permissions and limitations under
-the License.
+My name is Calvin! :]
+
+Check out my other work here on [GitHub](https://github.com/raicalvin).
+
+You can also reach me by [email](mailto:raicalvin@gmail.com)!
