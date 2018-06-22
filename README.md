@@ -4,7 +4,7 @@
 
 ### About
 
-This project was developed in my Android Basics Nanodegree program from Udacity's Grow With Google Developer Scholarship. Users can swipe between tabs to access different categories, tap on words and phrases to hear the Miwok pronounciation, and learn some of the common words and phrases found in the Miwok language.
+This project was developed in my Android Basics Nanodegree program from Udacity's Grow With Google Developer Scholarship. Users can swipe between tabs to access different categories, tap on words and phrases to hear the Miwok pronunciation, and learn some of the common words and phrases found in the Miwok language.
 
 ### Concepts
 
